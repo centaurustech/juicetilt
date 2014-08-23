@@ -82,5 +82,5 @@ Rails.application.configure do
 
   # Required for Heroku
   # need to set to actual host name
-  config.action_mailer.default_url_options = { host: => 'juicetilt.com' }
+  config.action_mailer.default_url_options = { host: 'juicetilt.com' }
 end
