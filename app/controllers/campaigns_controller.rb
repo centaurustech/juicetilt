@@ -30,7 +30,7 @@ class CampaignsController < ApplicationController
       if @campaign.update(campaign_params)
         redirect_to @campaign, notice: 'Campaign was successfully updated.' 
       else
-        render :edit     
+        render :edit   
     end
   end
 
@@ -52,6 +52,6 @@ class CampaignsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def campaign_params
-      params.require(:campaign).permit(:description)
+      params.require(:campaign).permit(:description, :image)
     end
 end

@@ -4,6 +4,7 @@
     <% @campaigns.each do |campaign| %>
     
         <div class="well well-lg">
+          <%= image_tag campaign.image.url(:medium) %><br>
           <%= campaign.description %><br>
           <%= campaign.user.email if campaign.user %><br>
           <%= campaign.id %><br>
