@@ -1,0 +1,19 @@
+<h1>Listing campaigns</h1>
+
+
+    <% @campaigns.each do |campaign| %>
+    
+        <div class="well well-lg">
+          <%= campaign.description %><br>
+          <%= link_to 'Show', campaign %><br>
+          <%= link_to 'Edit', edit_campaign_path(campaign) %><br>
+          <%= link_to 'Destroy', campaign, method: :delete, data: { confirm: 'Are you sure?' } %>
+   
+        </div>
+
+    <% end %>
+
+<br>
+
+<%= link_to 'New Campaign', new_campaign_path %>
+
