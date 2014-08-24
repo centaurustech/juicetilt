@@ -1,22 +1,22 @@
-<h1>Listing campaigns</h1>
+<h1>Discover the hottest new flavors</h1>
 
-
+  <div id="campaigns" class="transition-enabled">
     <% @campaigns.each do |campaign| %>
-    
-        <div class="well well-lg">
+        <div class="box panel panel-default">
           <%= image_tag campaign.image.url(:medium) %><br>
-          <%= campaign.description %><br>
-          <%= campaign.user.email if campaign.user %><br>
-          <%= campaign.id %><br>
-          <%= link_to 'Show', campaign %><br>
-          <% if campaign.user == current_user %>
-	          <%= link_to 'Edit', edit_campaign_path(campaign) %><br>
-	          <%= link_to 'Destroy', campaign, method: :delete, data: { confirm: 'Are you sure?' } %>
-          <% end %>
-   
+          <div class="panel-body">
+            <%= campaign.description %><br>
+            <%= campaign.user.email if campaign.user %><br>
+            <%= campaign.id %><br>
+            <%= link_to 'Show', campaign %><br>
+            <% if campaign.user == current_user %>
+  	          <%= link_to 'Edit', edit_campaign_path(campaign) %><br>
+  	          <%= link_to 'Destroy', campaign, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <% end %>
+          </div>
         </div>
-
     <% end %>
+  </div>
 
 <br>
 <% if user_signed_in? %>

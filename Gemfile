@@ -6,11 +6,13 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'jquery-turbolinks', '~> 2.0.2'
 gem 'jbuilder', '~> 2.0'
 gem 'bootstrap-sass'
 gem 'devise', '~> 3.3.0'
 gem "paperclip", "~> 4.1"
 gem 'aws-sdk', '~> 1.51.0'
+gem 'masonry-rails', '~> 0.2.1'
 
 
 gem 'sdoc', '~> 0.4.0',          group: :doc
