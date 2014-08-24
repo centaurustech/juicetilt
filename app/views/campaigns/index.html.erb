@@ -8,10 +8,10 @@
           <%= campaign.user.email if campaign.user %><br>
           <%= campaign.id %><br>
           <%= link_to 'Show', campaign %><br>
-         <!--<% if campaign.user == current_user %> -->
+          <% if campaign.user == current_user %>
 	          <%= link_to 'Edit', edit_campaign_path(campaign) %><br>
 	          <%= link_to 'Destroy', campaign, method: :delete, data: { confirm: 'Are you sure?' } %>
-          <!--<% end %>-->
+          <% end %>
    
         </div>
 

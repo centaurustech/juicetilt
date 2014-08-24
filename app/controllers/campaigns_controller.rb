@@ -1,7 +1,7 @@
 class CampaignsController < ApplicationController
   before_action :set_campaign, only: [:show, :edit, :update, :destroy]
-  #before_action :correct_user, only: [:edit, :update, :destroy]
-  #before_action :authenticate_user!, except: [:index, :show]
+  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @campaigns = Campaign.all
@@ -45,10 +45,10 @@ class CampaignsController < ApplicationController
       @campaign = Campaign.find(params[:id])
     end
 
-    #def correct_user
-     # @campaign = current_user.campaigns.find_by(id: params[:id])
-      #redirect_to campaigns_path, notice: "Not authorized to edit this campaign" if @campaign.nil?
-    #end
+    def correct_user
+      @campaign = current_user.campaigns.find_by(id: params[:id])
+      redirect_to campaigns_path, notice: "Not authorized to edit this campaign" if @campaign.nil?
+    end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def campaign_params
