@@ -1,5 +1,7 @@
 class CampaignsController < ApplicationController
   before_action :set_campaign, only: [:show, :edit, :update, :destroy]
+  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @campaigns = Campaign.all
@@ -9,14 +11,14 @@ class CampaignsController < ApplicationController
   end
 
   def new
-    @campaign = Campaign.new
+    @campaign = current_user.campaigns.build
   end
 
   def edit
   end
 
   def create
-    @campaign = Campaign.new(campaign_params)   
+    @campaign = current_user.campaigns.build(campaign_params)   
       if @campaign.save
         redirect_to @campaign, notice: 'Campaign was successfully created.' 
       else
@@ -41,6 +43,11 @@ class CampaignsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_campaign
       @campaign = Campaign.find(params[:id])
+    end
+
+    def correct_user
+      @campaign = current_user.campaigns.find_by(id: params[:id])
+      redirect_to campaigns_path, notice: "Not authorized to edit this campaign" if @campaign.nil?
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

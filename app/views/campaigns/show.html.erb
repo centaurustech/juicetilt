@@ -4,6 +4,7 @@
   <strong>Description:</strong>
   <%= @campaign.description %>
 </p>
-
-<%= link_to 'Edit', edit_campaign_path(@campaign) %> |
+<% if @campaign.user == current_user %>
+	<%= link_to 'Edit', edit_campaign_path(@campaign) %> |
+<% end %>
 <%= link_to 'Back', campaigns_path %>
