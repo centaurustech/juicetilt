@@ -19,3 +19,22 @@
 h1 {
 	text-align: center;
 }
+
+#show_sidebar h1 {
+	text-align: left;
+	padding-bottom: 0px !important;
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+
+#show_panel_heading {
+	position: relative;
+	overflow: hidden;
+}
+
+#show_panel_heading img {
+	height: 480px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+}
