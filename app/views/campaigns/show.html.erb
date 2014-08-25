@@ -1,8 +1,15 @@
+<div class="row" id="show_heading">
+	<div class="col-md-offset-3 col-md-6">
+		<strong><h1><%= @campaign.description %></h1></strong>
+        <h4>By <%= @campaign.user.name if @campaign.user %></h4>
+    </div>
+</div>
+
 <div class="row">
 	<div class="col-md-offset-1 col-md-10">
 		<div class="panel panel-default">
 			<div class="panel-heading" id="show_panel_heading">
-				<div class="col-md-offset-1 col-md-7">
+				<div class="col-md-8">
 					<%= image_tag @campaign.image.url(:medium) %>
 				</div>
 				<div class="col-md-3>" id="show_sidebar">

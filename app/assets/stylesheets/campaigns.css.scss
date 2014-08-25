@@ -20,7 +20,19 @@ h1 {
 	text-align: center;
 }
 
+// SHOW PAGE CSS 
+
+#show_heading {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+#show_heading h1 {
+	font-weight: 800;
+}
+
 #show_sidebar h1 {
+	font-weight: 800;
 	text-align: left;
 	padding-bottom: 0px !important;
 	margin-top: 10px;
@@ -30,11 +42,15 @@ h1 {
 #show_panel_heading {
 	position: relative;
 	overflow: hidden;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-left: 25px;
+	padding-right: 25px;
 }
 
 #show_panel_heading img {
 	height: 480px;
 	margin-left: auto;
 	margin-right: auto;
-	width: 80%;
+	width: 95%;
 }
