@@ -2,7 +2,8 @@
 
 <p>
   <strong>Description:</strong>
-  <%= @campaign.description %>
+  <%= @campaign.description %><br/>
+  <%= @campaign.blurb %>
 </p>
 <% if @campaign.user == current_user %>
 	<%= link_to 'Edit', edit_campaign_path(@campaign) %> |

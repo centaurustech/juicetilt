@@ -3,16 +3,17 @@
   <div id="campaigns" class="transition-enabled">
     <% @campaigns.each do |campaign| %>
         <div class="box panel panel-default">
-          <%= image_tag campaign.image.url(:medium) %><br>
+          <%= link_to image_tag(campaign.image.url(:medium)), campaign %>
           <div class="panel-body">
-            <%= campaign.description %><br>
-            <%= campaign.user.email if campaign.user %><br>
-            <%= campaign.id %><br>
-            <%= link_to 'Show', campaign %><br>
-            <% if campaign.user == current_user %>
-  	          <%= link_to 'Edit', edit_campaign_path(campaign) %><br>
-  	          <%= link_to 'Destroy', campaign, method: :delete, data: { confirm: 'Are you sure?' } %>
-            <% end %>
+            <strong><%= campaign.description %></strong><br/>
+            By <%= campaign.user.name if campaign.user %><br/><br/>
+            <%= campaign.blurb %><br/><br/>
+              <% if campaign.user == current_user %>
+                <div class="actions">
+        	        <%= link_to 'Edit', edit_campaign_path(campaign) %>
+        	        <%= link_to 'Destroy', campaign, method: :delete, data: { confirm: 'Are you sure?' } %>
+                </div>
+              <% end %>
           </div>
         </div>
     <% end %>

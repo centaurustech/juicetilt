@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140824062248) do
+ActiveRecord::Schema.define(version: 20140825010237) do
 
   create_table "campaigns", force: true do |t|
     t.string   "description"
@@ -22,8 +22,11 @@ ActiveRecord::Schema.define(version: 20140824062248) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.text     "shortblurb"
+    t.text     "blurb"
   end
 
+  add_index "campaigns", ["shortblurb"], name: "index_campaigns_on_shortblurb"
   add_index "campaigns", ["user_id"], name: "index_campaigns_on_user_id"
 
   create_table "users", force: true do |t|
@@ -39,6 +42,7 @@ ActiveRecord::Schema.define(version: 20140824062248) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
