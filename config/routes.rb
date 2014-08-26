@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :payment_options
+
+  resources :orders
+
   resources :campaigns
 
   devise_for :users
