@@ -158,7 +158,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  amazon_flex_pay
+  amazon_flex_pay (~> 0.10.0)
   aws-sdk (~> 1.51.0)
   bootstrap-sass
   coffee-rails (~> 4.0.0)
