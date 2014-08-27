@@ -13,36 +13,39 @@
 					<div id="video">
 					
 						<iframe width="560" height="315" src="http://www.youtube.com/embed/<%= @youtube_id %>?rel=0" frameborder="0" frameborder="0" allowfullscreen></iframe>
+
 					</div>
 
 
-				<div class="col-md-3>" id="show_sidebar">
-						<strong><h1>100</h2></strong>
-						backers<br>
-						<strong><h1>$2,020</h2></strong>
-						pledged of $5000 goal<br>
-						<strong><h1>10</h2></strong>
-						days to go<br><br>
-						<div class="progress">
-						  <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-						    <span class="sr-only">20% Complete</span>
-						  </div>
-						</div>
-						<p>
-						<%= link_to "Back This Campaign", new_user_registration_path, class: "btn btn-success btn-lg" %>
-						</p>
+					<div class="col-md-3>" id="show_sidebar">
+							<strong><h1>100</h2></strong>
+							backers<br>
+							<strong><h1>$2,020</h2></strong>
+							pledged of $5000 goal<br>
+							<strong><h1>10</h2></strong>
+							days to go<br><br>
+							<div class="progress">
+							  <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+							    <span class="sr-only">20% Complete</span>
+							  </div>
+							</div>
+							<p>
+							<%= link_to "Back This Campaign", new_user_registration_path, class: "btn btn-success btn-lg" %>
+							</p>
+					</div>
 				</div>
-			</div>
-			<div class="panel-body">
-				<p>
-					<strong>Description:</strong><br/>
-					<%= @campaign.description %><br/>
-					<%= @campaign.blurb %>
-				</p>
-				<% if @campaign.user == current_user %>
-					<%= link_to 'Edit', edit_campaign_path(@campaign) %> |
-				<% end %>
-				<%= link_to 'Back', campaigns_path %>
+
+				<div class="panel-body">
+					<p>
+						<strong>Description:</strong><br/>
+						<%= @campaign.description %><br/>
+						<%= @campaign.blurb %>
+					</p>
+					<% if @campaign.user == current_user %>
+						<%= link_to 'Edit', edit_campaign_path(@campaign) %> |
+					<% end %>
+					<%= link_to 'Back', campaigns_path %>
+				</div>
 			</div>
 		</div>
 	</div>
