@@ -2,12 +2,25 @@
 
   <div id="campaigns" class="transition-enabled">
     <% @campaigns.each do |campaign| %>
-        <div class="box panel panel-default">
+        <div class="box panel panel-default" id="index_box">
           <%= link_to image_tag(campaign.image.url(:medium)), campaign %>
           <div class="panel-body">
             <strong><%= campaign.description %></strong><br/>
             By <%= campaign.user.name if campaign.user %><br/><br/>
             <%= campaign.blurb %><br/><br/>
+
+            <div id="video">
+              <iframe width='512' height='385' src="<%= campaign.video_url %>"></iframe>
+            </div>
+
+
+
+
+
+
+
+
+
               <% if campaign.user == current_user %>
                 <div class="actions">
         	        <%= link_to 'Edit', edit_campaign_path(campaign) %>

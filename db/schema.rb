@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140826185204) do
+ActiveRecord::Schema.define(version: 20140827192806) do
 
   create_table "campaigns", force: true do |t|
     t.string   "description"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20140826185204) do
     t.datetime "image_updated_at"
     t.text     "shortblurb"
     t.text     "blurb"
+    t.string   "video_url"
   end
 
   add_index "campaigns", ["shortblurb"], name: "index_campaigns_on_shortblurb"

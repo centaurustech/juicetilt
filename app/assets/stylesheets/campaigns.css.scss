@@ -6,18 +6,38 @@
   margin: 0 auto;
 }
 
-.box {
+#index_box {
   margin: 15px;
   width: 290px;
   height: 520px;
 }
 
-.box img {
+#index_box img {
   width: 100%;
 }
 
 h1 {
 	text-align: center;
+}
+
+// CREATE PAGE CSS
+
+#create_form p {
+	font-size: 12px;
+}
+
+#form_panel_body {
+	padding: 20px;
+}
+
+#form_panel_body .form-group {
+	background-color: #f7fafa;
+	border-radius: 6px;
+	padding: 10px;
+}
+
+#form_submit {
+	background-color: #ffffff !important;
 }
 
 // SHOW PAGE CSS 

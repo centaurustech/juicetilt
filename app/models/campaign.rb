@@ -6,6 +6,7 @@ class Campaign < ActiveRecord::Base
 	validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
 	validates :image, presence: true
+	validates :video_url, presence: true
 	validates :description, presence: true
 	validates :blurb, presence: true
 end
