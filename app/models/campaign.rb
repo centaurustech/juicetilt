@@ -9,4 +9,12 @@ class Campaign < ActiveRecord::Base
 	validates :video_url, presence: true
 	validates :description, presence: true
 	validates :blurb, presence: true
+
+	auto_html_for :video_url do
+	    html_escape
+	    image
+	    youtube(:width => 500, :height => 375, :autoplay => true)
+	    link :target => "_blank", :rel => "nofollow"
+	    simple_format
+  	end
 end

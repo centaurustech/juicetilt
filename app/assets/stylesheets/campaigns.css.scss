@@ -20,6 +20,10 @@ h1 {
 	text-align: center;
 }
 
+.pagination-centered {
+	text-align: center;
+}
+
 // CREATE PAGE CSS
 
 #create_form p {
@@ -64,8 +68,8 @@ h1 {
 	overflow: hidden;
 	padding-top: 25px;
 	padding-bottom: 25px;
-	padding-left: 25px;
-	padding-right: 25px;
+	padding-left: 0px;
+	padding-right: 40px;
 }
 
 #show_panel_heading img {

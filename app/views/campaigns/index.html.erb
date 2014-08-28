@@ -5,13 +5,11 @@
         <div class="box panel panel-default" id="index_box">
           <%= link_to image_tag(campaign.image.url(:medium)), campaign %>
           <div class="panel-body">
-            <strong><%= campaign.description %></strong><br/>
+            <strong><%= campaign.blurb %></strong><br/>
             By <%= campaign.user.name if campaign.user %><br/><br/>
-            <%= campaign.blurb %><br/><br/>
+            <%= campaign.description %><br/><br/>
 
-            <div id="video">
-              <iframe width='512' height='385' src="<%= campaign.video_url %>"></iframe>
-            </div>
+      
 
 
 

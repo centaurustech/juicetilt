@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.1.2'
+
 gem 'rails', '4.1.4'
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
@@ -17,9 +19,7 @@ gem 'amazon_flex_pay', '~> 0.10.0'
 gem "figaro"
 gem 'auto_html', '~> 1.6.4'
 
-gem 'sdoc', '~> 0.4.0',          group: :doc
 
-gem 'spring',        group: :development
 
 group :development, :test do
      gem 'sqlite3'
