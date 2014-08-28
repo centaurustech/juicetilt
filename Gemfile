@@ -15,6 +15,7 @@ gem 'aws-sdk', '~> 1.51.0'
 gem 'masonry-rails', '~> 0.2.1'
 gem 'amazon_flex_pay', '~> 0.10.0'
 gem "figaro"
+gem 'auto_html', '~> 1.6.4'
 
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
