@@ -5,9 +5,9 @@
         <div class="box panel panel-default" id="index_box">
           <%= link_to image_tag(campaign.image.url(:medium)), campaign %>
           <div class="panel-body">
-            <strong><%= campaign.blurb %></strong><br/>
+            <strong><%= campaign.project_title %></strong><br/>
             By <%= campaign.user.name if campaign.user %><br/><br/>
-            <%= campaign.description %><br/><br/>
+            <%= campaign.blurb %><br/><br/>
 
       
 
