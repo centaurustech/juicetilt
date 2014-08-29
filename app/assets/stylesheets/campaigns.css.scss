@@ -18,13 +18,43 @@
 
 h1 {
 	text-align: center;
+	font-weight: 800;
 }
 
 .pagination-centered {
 	text-align: center;
 }
 
+.no-gutter {
+	padding-left: 0;
+	padding-right: 0
+}
 // CREATE PAGE CSS
+
+// .demo{
+//     margin-bottom: -99999px;
+//     padding-bottom: 99999px;
+//     background-color:#efefef;
+// }
+
+// #equalheight {
+//     overflow: hidden; 
+// }
+
+// #form_sidebar_panel_body {
+// 	background-color: #d8e6e6;
+// 	border-right-style: none;
+// }
+
+.form_group {
+	background-color: #f7fafa;
+	border-radius: 6px;
+	padding: 10px;
+}
+
+#create_form .col-lg-10 {
+	margin-bottom: 50px;
+}
 
 #create_form p {
 	font-size: 12px;
@@ -32,12 +62,18 @@ h1 {
 
 #form_panel_body {
 	padding: 20px;
+	background-color: #f7fafa;
 }
 
-#form_panel_body .form-group {
-	background-color: #f7fafa;
-	border-radius: 6px;
-	padding: 10px;
+// #form_panel_body .form-group {
+// 	background-color: #f7fafa;
+// 	border-radius: 6px;
+// 	padding: 10px;
+// }
+
+.control-label {
+	font-weight: 800;
+	font-size: 14px;
 }
 
 #form_submit {
