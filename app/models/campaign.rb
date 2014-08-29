@@ -9,6 +9,8 @@ class Campaign < ActiveRecord::Base
 	validates :description, presence: true
 	validates :blurb, presence: true
 	validates :project_title, presence: true
+	validates :funding_goal, presence: true
+	validates :funding_duration, presence: true
 
 	auto_html_for :video_url do
 	    html_escape
@@ -18,3 +20,4 @@ class Campaign < ActiveRecord::Base
 	    simple_format
   	end
 end
+ 

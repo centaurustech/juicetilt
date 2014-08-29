@@ -16,49 +16,70 @@
     <div class="panel panel-default">
       <div class="panel-body" id="form_panel_body">
 
+        <h3 class="no_spacing"><strong>Basics</strong></h3>
+        <h5>Make a good first impression: introduce your campaign objectives and entice people to learn more. This basic information will represent your campaign on your campaign page, on your campaign card, and in searches.</h5>
+
+        <hr>
+
+
         <div class="form-group">
-          <%= f.label :image, class:  "col-lg-2 control-label" %>
-          <div class="col-lg-10">
+          <%= f.label :image, class:  "col-lg-3 control-label" %>
+          <div class="col-lg-9">
           <%= f.file_field :image, autocomplete: "on", class: "form-control"   %>
           </div>
         </div>
 
         <div class="form-group">
-          <%= f.label :project_title, class:  "col-lg-2 control-label" %>
-          <div class="col-lg-10">
+          <%= f.label :project_title, class:  "col-lg-3 control-label" %>
+          <div class="col-lg-9">
           <%= f.text_field :project_title, class: "form-control"   %>
-          <p>Your project title should be simple, specific, and memorable, and it should include the title of the creative project you're raising funds for. Avoid words like "help,” "support,” or "fund.”</p>
+          <h6>Your project title should be simple, specific, and memorable, and it should include the title of the creative project you're raising funds for. Avoid words like "help,” "support,” or "fund.”</h6>
           </div>
         </div>
       
 
-        <div class="form-group">
-          <%= f.label :campaign_video, class:  "col-lg-2 control-label" %>
-          <div class="col-lg-10">
+       <!--  <div class="form-group">
+          <%= f.label :campaign_video, class:  "col-lg-3 control-label" %>
+          <div class="col-lg-9">
           <%= f.text_field :video_url, class: "form-control", placeholder: "http://youtube.com/watch?"   %>
           <p>The most important thing about project videos? Making one. Projects with a video have a much higher chance of success. It doesn't need to be an Oscar contender, just be yourself and explain what you want to do. For helpful tips and a dose of inspiration, check out our post on making an awesome project video</p>
           </div>
+        </div> -->
+
+        <div class="form-group">
+          <%= f.label :tagline, class:  "col-lg-3 control-label" %>
+          <div class="col-lg-9">
+          <%= f.text_field :blurb, class: "form-control"   %>
+          <h6>If you had to describe what you're creating in one tweet, how would you do it?</h6>
+          </div>
         </div>
 
         <div class="form-group">
-          <%= f.label :blurb, class:  "col-lg-2 control-label" %>
-          <div class="col-lg-10">
-          <%= f.text_field :blurb, class: "form-control"   %>
-          <p>If you had to describe what you're creating in one tweet, how would you do it?</p>
+          <%= f.label :Deadline, class:  "col-lg-3 control-label" %>
+          <div class="col-lg-9">
+          <h5>Funding ends <%= f.text_field :funding_duration, cols: 2, rows: 3, class: "form-control funding_days"   %> days from launch (60 days max)</h5>
           </div>
         </div>
 
-         <div class="form-group">
-          <%= f.label :description, class:  "col-lg-2 control-label" %>
-          <div class="col-lg-10">
+        <div class="form-group">
+          <%= f.label :funding_goal, class:  "col-lg-3 control-label" %>
+          <div class="col-lg-9">
+          <%= f.text_field :funding_goal, class: "form-control", placeholder: "$0 USD"%>
+          <h6>Your funding goal should be the minimum amount needed to complete the project and fulfill all rewards. Because funding is all-or-nothing, you can always raise more than your goal but never less. <br><br> If your project is successfully funded, Kickstarter will apply a 5% fee to the funds raised, and Amazon will apply credit card processing fees (about 3-5%). If funding isn't successful, there are no fees.</h6>
+          </div>
+        </div>
+
+      <!--    <div class="form-group">
+          <%= f.label :description, class:  "col-lg-3 control-label" %>
+          <div class="col-lg-9">
           <%= f.text_area :description, class: "form-control"   %>
           <p>Use your project description to share more about what you’re raising funds to do and how you plan to pull it off. It’s up to you to make the case for your project.</p>
           </div>
-        </div>
+        </div> -->
 
         <div class="form-group" id="form_submit">
-          <div class="col-lg-10">
-          <%= f.submit "Submit", class: "btn btn-primary btn-lg"  %>
+          <div class="col-lg-2 pull-right">
+          <%= f.submit "Continue", class: "btn btn-primary btn-lg"  %>
         </div>
         </div>
 

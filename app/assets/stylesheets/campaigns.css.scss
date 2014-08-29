@@ -16,7 +16,11 @@
   width: 100%;
 }
 
-h1 {
+.centered {
+	text-align: center;
+}
+
+.centered-strong {
 	text-align: center;
 	font-weight: 800;
 }
@@ -31,20 +35,12 @@ h1 {
 }
 // CREATE PAGE CSS
 
-// .demo{
-//     margin-bottom: -99999px;
-//     padding-bottom: 99999px;
-//     background-color:#efefef;
-// }
-
-// #equalheight {
-//     overflow: hidden; 
-// }
-
-// #form_sidebar_panel_body {
-// 	background-color: #d8e6e6;
-// 	border-right-style: none;
-// }
+.funding_days {
+	width: 60px !important;
+	display: inline;
+	margin-left: 10px;
+	margin-right: 10px;
+}
 
 .form_group {
 	background-color: #f7fafa;
@@ -52,8 +48,13 @@ h1 {
 	padding: 10px;
 }
 
-#create_form .col-lg-10 {
+#create_form .col-lg-9 {
 	margin-bottom: 50px;
+}
+
+#create_form .col-lg-2 {
+	margin-bottom: 20px;
+	margin-right: 40px;
 }
 
 #create_form p {
@@ -65,12 +66,6 @@ h1 {
 	background-color: #f7fafa;
 }
 
-// #form_panel_body .form-group {
-// 	background-color: #f7fafa;
-// 	border-radius: 6px;
-// 	padding: 10px;
-// }
-
 .control-label {
 	font-weight: 800;
 	font-size: 14px;
@@ -81,6 +76,9 @@ h1 {
 }
 
 // SHOW PAGE CSS 
+.no_spacing {
+	margin-top: 0px;
+}
 
 #show_heading {
 	text-align: center;
