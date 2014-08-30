@@ -1,4 +1,4 @@
-<%= form_for @campaign, html: { multipart: true } do |f| %>
+<%= form_for @campaign, id: "msform", html: { multipart: true } do |f| %>
   <% if @campaign.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@campaign.errors.count, "error") %> prohibited this campaign from being saved:</h2>
@@ -16,72 +16,132 @@
     <div class="panel panel-default">
       <div class="panel-body" id="form_panel_body">
 
+
+
+        <fieldset id="first">
+
         <h3 class="no_spacing"><strong>Basics</strong></h3>
         <h5>Make a good first impression: introduce your campaign objectives and entice people to learn more. This basic information will represent your campaign on your campaign page, on your campaign card, and in searches.</h5>
 
         <hr>
 
-
-        <div class="form-group">
-          <%= f.label :image, class:  "col-lg-3 control-label" %>
-          <div class="col-lg-9">
-          <%= f.file_field :image, autocomplete: "on", class: "form-control"   %>
+          <div class="form-group">
+            <%= f.label :image, class:  "col-lg-3 control-label" %>
+            <div class="col-lg-9">
+            <%= f.file_field :image, autocomplete: "on", class: "form-control"   %>
+            </div>
           </div>
-        </div>
 
-        <div class="form-group">
-          <%= f.label :project_title, class:  "col-lg-3 control-label" %>
-          <div class="col-lg-9">
-          <%= f.text_field :project_title, class: "form-control"   %>
-          <h6>Your project title should be simple, specific, and memorable, and it should include the title of the creative project you're raising funds for. Avoid words like "help,” "support,” or "fund.”</h6>
+          <div class="form-group">
+            <%= f.label :project_title, class:  "col-lg-3 control-label" %>
+            <div class="col-lg-9">
+            <%= f.text_field :project_title, class: "form-control"   %>
+            <h6>Your project title should be simple, specific, and memorable, and it should include the title of the creative project you're raising funds for. Avoid words like "help,” "support,” or "fund.”</h6>
+            </div>
           </div>
-        </div>
-      
 
-       <!--  <div class="form-group">
-          <%= f.label :campaign_video, class:  "col-lg-3 control-label" %>
-          <div class="col-lg-9">
-          <%= f.text_field :video_url, class: "form-control", placeholder: "http://youtube.com/watch?"   %>
-          <p>The most important thing about project videos? Making one. Projects with a video have a much higher chance of success. It doesn't need to be an Oscar contender, just be yourself and explain what you want to do. For helpful tips and a dose of inspiration, check out our post on making an awesome project video</p>
+          <div class="form-group">
+            <%= f.label :tagline, class:  "col-lg-3 control-label" %>
+            <div class="col-lg-9">
+            <%= f.text_field :blurb, class: "form-control"   %>
+            <h6>If you had to describe what you're creating in one tweet, how would you do it?</h6>
+            </div>
           </div>
-        </div> -->
 
-        <div class="form-group">
-          <%= f.label :tagline, class:  "col-lg-3 control-label" %>
-          <div class="col-lg-9">
-          <%= f.text_field :blurb, class: "form-control"   %>
-          <h6>If you had to describe what you're creating in one tweet, how would you do it?</h6>
+          <div class="form-group">
+            <%= f.label :Deadline, class:  "col-lg-3 control-label" %>
+            <div class="col-lg-9">
+            <h5>Funding ends <%= f.text_field :funding_duration, cols: 2, rows: 3, class: "form-control funding_days"   %> days from launch (60 days max)</h5>
+            </div>
           </div>
-        </div>
 
-        <div class="form-group">
-          <%= f.label :Deadline, class:  "col-lg-3 control-label" %>
-          <div class="col-lg-9">
-          <h5>Funding ends <%= f.text_field :funding_duration, cols: 2, rows: 3, class: "form-control funding_days"   %> days from launch (60 days max)</h5>
+          <div class="form-group">
+            <%= f.label :funding_goal, class:  "col-lg-3 control-label" %>
+            <div class="col-lg-9">
+            <%= f.text_field :funding_goal, class: "form-control", placeholder: "$0 USD"%>
+            <h6>Your funding goal should be the minimum amount needed to complete the project and fulfill all rewards. Because funding is all-or-nothing, you can always raise more than your goal but never less. <br><br> If your project is successfully funded, Kickstarter will apply a 5% fee to the funds raised, and Amazon will apply credit card processing fees (about 3-5%). If funding isn't successful, there are no fees.</h6>
+            </div>
           </div>
-        </div>
 
-        <div class="form-group">
-          <%= f.label :funding_goal, class:  "col-lg-3 control-label" %>
-          <div class="col-lg-9">
-          <%= f.text_field :funding_goal, class: "form-control", placeholder: "$0 USD"%>
-          <h6>Your funding goal should be the minimum amount needed to complete the project and fulfill all rewards. Because funding is all-or-nothing, you can always raise more than your goal but never less. <br><br> If your project is successfully funded, Kickstarter will apply a 5% fee to the funds raised, and Amazon will apply credit card processing fees (about 3-5%). If funding isn't successful, there are no fees.</h6>
+
+          <div class="col-lg-2 pull-right">
+            <input id="next_btn1" onclick="next_step1()" type="button" value="Continue" class="btn btn-primary btn-lg">
           </div>
-        </div>
 
-      <!--    <div class="form-group">
+        </fieldset>
+        <fieldset id="second">
+
+        <h3 class="no_spacing"><strong>Story</strong></h3>
+        <h5>Tell potential contributors more about your campaign. Introduce yourself and provide details that will motivate people to contribute. A good pitch is compelling, informative, and easy to digest.</h5>
+
+        <hr>
+
+          <div class="form-group">
+            <%= f.label :campaign_video, class:  "col-lg-3 control-label" %>
+            <div class="col-lg-9">
+            <%= f.text_field :video_url, class: "form-control", placeholder: "http://youtube.com/watch?"   %>
+            <h6>The most important thing about project videos? Making one. Projects with a video have a much higher chance of success. It doesn't need to be an Oscar contender, just be yourself and explain what you want to do. For helpful tips and a dose of inspiration, check out our post on making an awesome project video</h6>
+            </div>
+          </div>
+
+          <div class="form-group">
           <%= f.label :description, class:  "col-lg-3 control-label" %>
           <div class="col-lg-9">
-          <%= f.text_area :description, class: "form-control"   %>
-          <p>Use your project description to share more about what you’re raising funds to do and how you plan to pull it off. It’s up to you to make the case for your project.</p>
-          </div>
-        </div> -->
+          <%= f.bootsy_area :description, class: "form-control bootsy", placeholder: 
 
-        <div class="form-group" id="form_submit">
+      "<strong><h3>Short Summary</h3></strong>
+      Contributors fund ideas they can be passionate about and to people they trust. Here are some things to do
+      <ul>
+      <li>Introduce yourself and your background.</li>
+      <li>Briefly describe your campaign and why it's important to you.</li>
+      <li>Express the magnitude of what contributors will help you achieve.</li>
+      </ul>
+      Remember, keep it concise, yet personal. Ask yourself: if someone stopped reading here would they be ready to make a contribution?
+
+      <strong><h3>What We Need & What You Get</h3></strong>
+      Break it down for folks in more detail:<br>
+      <ul>
+      <li>Explain how much funding you need and where it's going. Be transparent and specific-people need to trust you to want to fund you.</li>
+      <li>Tell people about your unique perks. Get them excited!</li>
+      <li>Describe where the funds go if you don't reach your entire goal.</li>
+      </ul>
+      <strong><h3>The Impact</h3></strong>
+      Feel free to explain more about your campaign and let people know how the difference their contribution will make:
+      <ul>
+      <li>Explain why your project is valuable to the contributor and to the world.</li>
+      <li>Point out your successful track record with projects like this (if you have one).</li>
+      <li>Make it real for people and build trust.</li>
+      </ul>
+      <strong><h3>Risks & Challenges</h3></strong>
+      People value your transparency. Be open and stand out by providing insight into the risks and obstacles you may face on the way to achieving your goal.
+      <ul>
+      <li>Share what qualifies you to overcome these hurdles.</li>
+      <li>Describe your plan for solving these challenges.</li>
+      </ul>
+      <strong><h3>Other Ways You Can Help</h3></strong>
+      Some people just can't contribute, but that doesn't mean they can't help:
+      <ul>
+      <li>Ask folks to get the word out and make some noise about your campaign.</li>
+      <li>Remind them to use the Indiegogo share tools!</li>
+      </ul>
+      And that's all there is to it."     %>
+            <h6>Use your project description to share more about what you’re raising funds to do and how you plan to pull it off. It’s up to you to make the case for your project.</h6>
+            </div>
+          </div>
+
+          <div class="form-group" id="form_submit">
+            <div class="col-lg-2 pull-right">
+            <%= f.submit "Continue", class: "btn btn-primary btn-lg"  %>
+            </div>
+          </div>
+
           <div class="col-lg-2 pull-right">
-          <%= f.submit "Continue", class: "btn btn-primary btn-lg"  %>
-        </div>
-        </div>
+            <input id="pre_btn1" onclick="prev_step1()" type="button" value="Previous" class="btn btn-default btn-lg">
+          </div>
+
+        </fieldset>
+
+
 
       </div>
     </div>
@@ -89,3 +149,5 @@
 </div>
 
 <% end %>
+
+
