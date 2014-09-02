@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140829155831) do
+ActiveRecord::Schema.define(version: 20140902160621) do
 
   create_table "bootsy_image_galleries", force: true do |t|
     t.integer  "bootsy_resource_id"
@@ -43,6 +43,14 @@ ActiveRecord::Schema.define(version: 20140829155831) do
     t.string   "project_title"
     t.integer  "funding_duration"
     t.integer  "funding_goal"
+    t.string   "legal_last_name"
+    t.string   "legal_first_name"
+    t.integer  "phone_number"
+    t.string   "street_address"
+    t.string   "country"
+    t.string   "city"
+    t.integer  "zip_code"
+    t.integer  "birthday"
   end
 
   add_index "campaigns", ["shortblurb"], name: "index_campaigns_on_shortblurb"

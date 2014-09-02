@@ -69,6 +69,11 @@
           </div>
 
         </fieldset>
+
+
+
+
+
         <fieldset id="second">
 
         <h3 class="no_spacing"><strong>Story</strong></h3>
@@ -105,29 +110,94 @@
       <li>Tell people about your unique perks. Get them excited!</li>
       <li>Describe where the funds go if you don't reach your entire goal.</li>
       </ul>
-      <strong><h3>The Impact</h3></strong>
-      Feel free to explain more about your campaign and let people know how the difference their contribution will make:
-      <ul>
-      <li>Explain why your project is valuable to the contributor and to the world.</li>
-      <li>Point out your successful track record with projects like this (if you have one).</li>
-      <li>Make it real for people and build trust.</li>
-      </ul>
       <strong><h3>Risks & Challenges</h3></strong>
       People value your transparency. Be open and stand out by providing insight into the risks and obstacles you may face on the way to achieving your goal.
       <ul>
       <li>Share what qualifies you to overcome these hurdles.</li>
       <li>Describe your plan for solving these challenges.</li>
       </ul>
-      <strong><h3>Other Ways You Can Help</h3></strong>
-      Some people just can't contribute, but that doesn't mean they can't help:
-      <ul>
-      <li>Ask folks to get the word out and make some noise about your campaign.</li>
-      <li>Remind them to use the Indiegogo share tools!</li>
-      </ul>
       And that's all there is to it."     %>
             <h6>Use your project description to share more about what you’re raising funds to do and how you plan to pull it off. It’s up to you to make the case for your project.</h6>
             </div>
           </div>
+
+          <div class="col-lg-2 pull-right">
+            <input id="next_btn2" onclick="next_step2()" type="button" value="Continue" class="btn btn-primary btn-lg">
+          </div>
+
+          <div class="col-lg-2 pull-right">
+            <input id="pre_btn1" onclick="prev_step1()" type="button" value="Previous" class="btn btn-default btn-lg">
+          </div>
+
+        </fieldset>
+
+
+
+
+        <fieldset id="third">
+
+        <h3 class="no_spacing"><strong>Team</strong></h3>
+        <h5>Please provide this person's information so we can get in touch if there are any issues with the campaign. This information will not be displayed or shared publicly.</h5>
+
+        <hr>
+
+          <div class="form-group">
+            <%= f.label :legal_first_name, class:  "col-lg-3 control-label" %>
+            <div class="col-lg-9">
+            <%= f.text_field :legal_first_name, class: "form-control"   %>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :legal_last_name, class:  "col-lg-3 control-label" %>
+            <div class="col-lg-9">
+            <%= f.text_field :legal_last_name, class: "form-control"   %>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :Date_of_birth, class:  "col-lg-3 control-label" %>
+            <div class="col-lg-9">
+            <%= f.date_select :birthday, class: "form-control" %>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :phone_number, class:  "col-lg-3 control-label" %>
+            <div class="col-lg-9">
+            <%= f.telephone_field :phone_number, class: "form-control"   %>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :country, class:  "col-lg-3 control-label" %>
+            <div class="col-lg-9">
+            <%= f.text_field :country, class: "form-control"   %>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :street_address, class:  "col-lg-3 control-label" %>
+            <div class="col-lg-9">
+            <%= f.text_field :street_address, class: "form-control"   %>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :city, class:  "col-lg-3 control-label" %>
+            <div class="col-lg-9">
+            <%= f.text_field :city, class: "form-control"   %>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :zip_code, class:  "col-lg-3 control-label" %>
+            <div class="col-lg-9">
+            <%= f.number_field :zip_code, class: "form-control"   %>
+            </div>
+          </div>
+
+
 
           <div class="form-group" id="form_submit">
             <div class="col-lg-2 pull-right">
@@ -136,7 +206,7 @@
           </div>
 
           <div class="col-lg-2 pull-right">
-            <input id="pre_btn1" onclick="prev_step1()" type="button" value="Previous" class="btn btn-default btn-lg">
+            <input id="pre_btn2" onclick="prev_step2()" type="button" value="Previous" class="btn btn-default btn-lg">
           </div>
 
         </fieldset>
