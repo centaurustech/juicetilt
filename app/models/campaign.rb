@@ -4,6 +4,12 @@ class Campaign < ActiveRecord::Base
 	has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
 	validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
+	has_attached_file :photo_id, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+	validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+
+	has_attached_file :check_scan, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+	validates_attachment_content_type :check_scan, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+
 	validates :image, presence: true
 	validates :video_url, presence: true
 	validates :description, presence: true
