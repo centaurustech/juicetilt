@@ -1,3 +1,17 @@
+<div class="row" id="form_topnav">
+  <div class="col-md-offset-3 col-md-7">
+
+      <input id="pre_btn1" onclick="basic_step()" type="button" value="Basics" class="btn btn-primary btn-lg top-nav">
+    
+      <input id="next_btn1" onclick="story_step()" type="button" value="Story" class="btn btn-primary btn-lg top-nav">
+    
+      <input id="next_btn2" onclick="team_step()" type="button" value="Team" class="btn btn-primary btn-lg top-nav">
+    
+      <input id="next_btn2" onclick="fund_step()" type="button" value="Funding" class="btn btn-primary btn-lg top-nav">
+
+    </div>
+</div>
+
 <%= form_for @campaign, id: "msform", html: { multipart: true } do |f| %>
   <% if @campaign.errors.any? %>
     <div id="error_explanation">

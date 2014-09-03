@@ -25,6 +25,49 @@ event.preventDefault();
 return true;
 }
 }
+
+// Topbar buttons
+
+/*---------------------------------------------------------*/
+// Function that executes on basic click
+function basic_step() {
+document.getElementById("first").style.display = "block";
+document.getElementById("second").style.display = "none";
+document.getElementById("third").style.display = "none";
+document.getElementById("fourth").style.display = "none";
+document.getElementById("active2").style.color = "red";
+}
+/*---------------------------------------------------------*/
+// Function that executes on basic click
+function story_step() {
+document.getElementById("second").style.display = "block";
+document.getElementById("first").style.display = "none";
+document.getElementById("third").style.display = "none";
+document.getElementById("fourth").style.display = "none";
+document.getElementById("active2").style.color = "red";
+}
+/*---------------------------------------------------------*/
+// Function that executes on basic click
+function team_step() {
+document.getElementById("third").style.display = "block";
+document.getElementById("first").style.display = "none";
+document.getElementById("second").style.display = "none";
+document.getElementById("fourth").style.display = "none";
+document.getElementById("active2").style.color = "red";
+}
+/*---------------------------------------------------------*/
+// Function that executes on basic click
+function fund_step() {
+document.getElementById("fourth").style.display = "block";
+document.getElementById("first").style.display = "none";
+document.getElementById("second").style.display = "none";
+document.getElementById("third").style.display = "none";
+document.getElementById("active2").style.color = "red";
+}
+
+// Form buttons
+
+
 /*---------------------------------------------------------*/
 // Function that executes on click of first next button.
 function next_step1() {
