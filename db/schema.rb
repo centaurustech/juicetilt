@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140903051928) do
+ActiveRecord::Schema.define(version: 20140903055729) do
 
   create_table "bootsy_image_galleries", force: true do |t|
     t.integer  "bootsy_resource_id"
@@ -63,6 +63,28 @@ ActiveRecord::Schema.define(version: 20140903051928) do
 
   add_index "campaigns", ["shortblurb"], name: "index_campaigns_on_shortblurb"
   add_index "campaigns", ["user_id"], name: "index_campaigns_on_user_id"
+
+  create_table "casein_admin_users", force: true do |t|
+    t.string   "login",                           null: false
+    t.string   "name"
+    t.string   "email"
+    t.integer  "access_level",        default: 0, null: false
+    t.string   "crypted_password",                null: false
+    t.string   "password_salt",                   null: false
+    t.string   "persistence_token"
+    t.string   "single_access_token"
+    t.string   "perishable_token"
+    t.integer  "login_count",         default: 0, null: false
+    t.integer  "failed_login_count",  default: 0, null: false
+    t.datetime "last_request_at"
+    t.datetime "current_login_at"
+    t.datetime "last_login_at"
+    t.string   "current_login_ip"
+    t.string   "last_login_ip"
+    t.string   "time_zone"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "orders", id: false, force: true do |t|
     t.string   "token"

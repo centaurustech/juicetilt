@@ -32,6 +32,10 @@ GEM
       multi_xml (>= 0.5.2)
       rest-client (~> 1.6.1)
     arel (5.0.1.20140414130214)
+    authlogic (3.4.2)
+      activerecord (>= 3.2)
+      activesupport (>= 3.2)
+      request_store (~> 1.0)
     auto_html (1.6.4)
       redcarpet (~> 3.1)
       rinku (~> 1.5.0)
@@ -51,6 +55,12 @@ GEM
       activesupport (>= 3.2.0)
       json (>= 1.7)
       mime-types (>= 1.16)
+    casein (5.0.0.0)
+      authlogic (= 3.4.2)
+      casein
+      jquery-rails
+      scrypt (= 1.2.1)
+      will_paginate (= 3.0.5)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.4)
@@ -70,6 +80,10 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.2.1)
+    ffi (1.9.3)
+    ffi-compiler (0.1.3)
+      ffi (>= 1.0.0)
+      rake
     figaro (0.7.0)
       bundler (~> 1.0)
       rails (>= 3, < 5)
@@ -133,6 +147,7 @@ GEM
     rake (10.3.2)
     redcarpet (3.1.2)
     remotipart (1.2.1)
+    request_store (1.1.0)
     rest-client (1.6.7)
       mime-types (>= 1.16)
     rinku (1.5.1)
@@ -142,6 +157,9 @@ GEM
       sass (~> 3.2.0)
       sprockets (~> 2.8, <= 2.11.0)
       sprockets-rails (~> 2.0)
+    scrypt (1.2.1)
+      ffi-compiler (>= 0.0.2)
+      rake
     sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -168,6 +186,7 @@ GEM
       json (>= 1.8.0)
     warden (1.2.3)
       rack (>= 1.0)
+    will_paginate (3.0.5)
 
 PLATFORMS
   ruby
@@ -178,6 +197,7 @@ DEPENDENCIES
   aws-sdk (~> 1.51.0)
   bootstrap-sass
   bootsy (~> 2.0.10)
+  casein (= 5.0.0)
   coffee-rails (~> 4.0.0)
   devise (~> 3.3.0)
   figaro

@@ -24,6 +24,10 @@ class Campaign < ActiveRecord::Base
 	    youtube(:width => 500, :height => 375, :autoplay => true)
 	    link :target => "_blank", :rel => "nofollow"
 	    simple_format
+
+	def user_email
+		user.email
   	end
+  end
 end
  

@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+
+	#Casein routes
+	namespace :casein do
+		resources :campaigns
+		resources :users
+	end
+
   mount Bootsy::Engine => '/bootsy', as: 'bootsy'
   resources :payment_options
 
