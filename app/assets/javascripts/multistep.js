@@ -35,33 +35,47 @@ document.getElementById("first").style.display = "block";
 document.getElementById("second").style.display = "none";
 document.getElementById("third").style.display = "none";
 document.getElementById("fourth").style.display = "none";
+document.getElementById("fifth").style.display = "none";
+document.getElementById("active2").style.color = "red";
+}
+/*---------------------------------------------------------*/
+// Function that executes on basic click
+function perks_step() {
+document.getElementById("second").style.display = "block";
+document.getElementById("first").style.display = "none";
+document.getElementById("third").style.display = "none";
+document.getElementById("fourth").style.display = "none";
+document.getElementById("fifth").style.display = "none";
 document.getElementById("active2").style.color = "red";
 }
 /*---------------------------------------------------------*/
 // Function that executes on basic click
 function story_step() {
-document.getElementById("second").style.display = "block";
+document.getElementById("third").style.display = "block";
 document.getElementById("first").style.display = "none";
-document.getElementById("third").style.display = "none";
+document.getElementById("second").style.display = "none";
 document.getElementById("fourth").style.display = "none";
+document.getElementById("fifth").style.display = "none";
 document.getElementById("active2").style.color = "red";
 }
 /*---------------------------------------------------------*/
 // Function that executes on basic click
 function team_step() {
-document.getElementById("third").style.display = "block";
+document.getElementById("fourth").style.display = "block";
 document.getElementById("first").style.display = "none";
 document.getElementById("second").style.display = "none";
-document.getElementById("fourth").style.display = "none";
+document.getElementById("third").style.display = "none";
+document.getElementById("fifth").style.display = "none";
 document.getElementById("active2").style.color = "red";
 }
 /*---------------------------------------------------------*/
 // Function that executes on basic click
 function fund_step() {
-document.getElementById("fourth").style.display = "block";
+document.getElementById("fifth").style.display = "block";
 document.getElementById("first").style.display = "none";
 document.getElementById("second").style.display = "none";
 document.getElementById("third").style.display = "none";
+document.getElementById("fourth").style.display = "none";
 document.getElementById("active2").style.color = "red";
 }
 

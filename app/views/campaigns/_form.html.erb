@@ -1,13 +1,19 @@
 <div class="row" id="form_topnav">
-  <div class="col-md-offset-3 col-md-7">
+  <div class="col-md-offset-2 col-md-8">
+
+    <center>
 
       <input id="pre_btn1" onclick="basic_step()" type="button" value="Basics" class="btn btn-primary btn-lg top-nav">
+
+      <input id="next_btn1" onclick="perks_step()" type="button" value="Perks" class="btn btn-primary btn-lg top-nav">
     
       <input id="next_btn1" onclick="story_step()" type="button" value="Story" class="btn btn-primary btn-lg top-nav">
     
       <input id="next_btn2" onclick="team_step()" type="button" value="Team" class="btn btn-primary btn-lg top-nav">
     
       <input id="next_btn2" onclick="fund_step()" type="button" value="Funding" class="btn btn-primary btn-lg top-nav">
+
+    </center>
 
     </div>
 </div>
@@ -79,7 +85,51 @@
 
 
           <div class="col-lg-2 pull-right">
-            <input id="next_btn1" onclick="next_step1()" type="button" value="Continue" class="btn btn-primary btn-lg">
+            <input id="next_btn1" onclick="perks_step()" type="button" value="Continue" class="btn btn-primary btn-lg">
+          </div>
+
+        </fieldset>
+
+
+
+
+        <fieldset id="second">
+
+        <h3 class="no_spacing"><strong>Perks</strong></h3>
+        <h5>Perks are incentives offered to contributors in exchange for their support. You can edit a perk until it has been claimed by a contributor and you can show up to 20 perks at a time on your campaign page.</h5>
+
+        <hr>
+
+        <div class="form-group tall">
+
+
+
+          
+         <%= f.fields_for :perks do |perk| %>
+           <%= render 'perk_fields', f: perk %>
+         <% end %>
+         <div class="form-group tall">
+         <%= link_to_add_association "Add Perk", f, :perks %>
+       </div>
+
+
+         </div>
+         
+
+          
+            
+        
+
+
+
+        
+
+           <div class="col-lg-2 pull-right">
+            <input id="next_btn2" onclick="story_step()" type="button" value="Continue" class="btn btn-primary btn-lg">
+          </div>
+
+          <div class="col-lg-2 pull-right">
+            <input id="pre_btn1" onclick="basic_step()" type="button" value="Previous" class="btn btn-default btn-lg">
           </div>
 
         </fieldset>
@@ -88,7 +138,7 @@
 
 
 
-        <fieldset id="second">
+        <fieldset id="third">
 
         <h3 class="no_spacing"><strong>Story</strong></h3>
         <h5>Tell potential contributors more about your campaign. Introduce yourself and provide details that will motivate people to contribute. A good pitch is compelling, informative, and easy to digest.</h5>
@@ -136,11 +186,11 @@
           </div>
 
           <div class="col-lg-2 pull-right">
-            <input id="next_btn2" onclick="next_step2()" type="button" value="Continue" class="btn btn-primary btn-lg">
+            <input id="next_btn2" onclick="team_step()" type="button" value="Continue" class="btn btn-primary btn-lg">
           </div>
 
           <div class="col-lg-2 pull-right">
-            <input id="pre_btn1" onclick="prev_step1()" type="button" value="Previous" class="btn btn-default btn-lg">
+            <input id="pre_btn1" onclick="perks_step()" type="button" value="Previous" class="btn btn-default btn-lg">
           </div>
 
         </fieldset>
@@ -148,7 +198,7 @@
 
 
 
-        <fieldset id="third">
+        <fieldset id="fourth">
 
         <h3 class="no_spacing"><strong>Team</strong></h3>
         <h5>Please provide this person's information so we can get in touch if there are any issues with the campaign. This information will not be displayed or shared publicly.</h5>
@@ -214,11 +264,11 @@
 
 
           <div class="col-lg-2 pull-right">
-            <input id="next_btn3" onclick="next_step3()" type="button" value="Continue" class="btn btn-primary btn-lg">
+            <input id="next_btn3" onclick="fund_step()" type="button" value="Continue" class="btn btn-primary btn-lg">
           </div>
 
           <div class="col-lg-2 pull-right">
-            <input id="pre_btn2" onclick="prev_step2()" type="button" value="Previous" class="btn btn-default btn-lg">
+            <input id="pre_btn2" onclick="story_step()" type="button" value="Previous" class="btn btn-default btn-lg">
           </div>
 
         </fieldset>
@@ -226,7 +276,7 @@
 
 
 
-         <fieldset id="fourth">
+         <fieldset id="fifth">
 
         <h3 class="no_spacing"><strong>Funding</strong></h3>
         <h5>Provide information for us to verify your account and set it up to receive payments. </h5>
@@ -259,7 +309,7 @@
           </div>
 
           <div class="col-lg-2 pull-right">
-            <input id="pre_btn3" onclick="prev_step3()" type="button" value="Previous" class="btn btn-default btn-lg">
+            <input id="pre_btn3" onclick="team_step()" type="button" value="Previous" class="btn btn-default btn-lg">
           </div>
 
         </fieldset>

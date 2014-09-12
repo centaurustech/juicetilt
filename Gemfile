@@ -20,6 +20,7 @@ gem "figaro"
 gem 'auto_html', '~> 1.6.4'
 gem 'bootsy', '~> 2.0.10'
 gem 'casein', '5.0.0'
+gem 'cocoon'
 
 group :development, :test do
      gem 'sqlite3'

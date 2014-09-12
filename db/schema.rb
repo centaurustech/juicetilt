@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140903055729) do
+ActiveRecord::Schema.define(version: 20140908064438) do
 
   create_table "bootsy_image_galleries", force: true do |t|
     t.integer  "bootsy_resource_id"
@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 20140903055729) do
     t.string   "check_scan_content_type"
     t.integer  "check_scan_file_size"
     t.datetime "check_scan_updated_at"
+    t.integer  "campaign_id"
   end
 
   add_index "campaigns", ["shortblurb"], name: "index_campaigns_on_shortblurb"
@@ -119,6 +120,23 @@ ActiveRecord::Schema.define(version: 20140903055729) do
     t.integer  "limit"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "perk", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+    t.integer  "amount"
+    t.text     "description"
+  end
+
+  create_table "perks", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+    t.integer  "amount"
+    t.text     "description"
+    t.integer  "campaign_id"
   end
 
   create_table "users", force: true do |t|

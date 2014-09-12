@@ -40,6 +40,10 @@
 
 // CREATE PAGE CSS
 
+.tall {
+	height: 300px;
+}
+
 #form_topnav {
 	width: 80%;
 	margin-top: 10px;
@@ -49,8 +53,8 @@
 }
 
 .top-nav {
-	margin-left: 3px;
-	margin-right: 3px;
+	margin-left: 5px;
+	margin-right: 5px;
 	border-bottom: none;
 }
 
