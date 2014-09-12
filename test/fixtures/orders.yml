@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 
+  token: MyString
+  transaction_id: MyString
+  address_one: MyString
+  address_two: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  country: MyString
+  status: MyString
+  number: MyString
+  uuid: MyString
+  uder_id: MyString
+  price: 9.99
+  shipping: 9.99
+  tracking_number: MyString
+  phone: MyString
+  name: MyString
+  expiration: 2014-08-26
+  payment_option_id: 1
+
+two:
+  id: 
+  token: MyString
+  transaction_id: MyString
+  address_one: MyString
+  address_two: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  country: MyString
+  status: MyString
+  number: MyString
+  uuid: MyString
+  uder_id: MyString
+  price: 9.99
+  shipping: 9.99
+  tracking_number: MyString
+  phone: MyString
+  name: MyString
+  expiration: 2014-08-26
+  payment_option_id: 1

@@ -1,0 +1,141 @@
+// Place all the styles related to the campaigns controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#campaigns {
+  margin: 0 auto;
+}
+
+#index_box {
+  margin: 15px;
+  width: 290px;
+  height: 520px;
+}
+
+#index_box img {
+  width: 100%;
+}
+
+.centered {
+	text-align: center;
+}
+
+.centered-strong {
+	text-align: center;
+	font-weight: 800;
+}
+
+.pagination-centered {
+	text-align: center;
+}
+
+.no-gutter {
+	padding-left: 0;
+	padding-right: 0
+}
+
+.navbar-inverse {
+	border-bottom: thin solid #d9d9de;
+}
+
+// CREATE PAGE CSS
+
+.tall {
+	height: 300px;
+}
+
+#form_topnav {
+	width: 80%;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.top-nav {
+	margin-left: 5px;
+	margin-right: 5px;
+	border-bottom: none;
+}
+
+.funding_days {
+	width: 60px !important;
+	display: inline;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.form_group {
+	background-color: #f7fafa;
+	border-radius: 6px;
+	padding: 10px;
+}
+
+#create_form .col-lg-9 {
+	margin-bottom: 50px;
+}
+
+#create_form .col-lg-3 {
+	margin-bottom: 50px;
+}
+
+#create_form .col-lg-2 {
+	margin-bottom: 20px;
+	margin-right: 40px;
+}
+
+#create_form p {
+	font-size: 12px;
+}
+
+#form_panel_body {
+	padding: 20px;
+	background-color: #f7fafa;
+}
+
+.control-label {
+	font-weight: 800;
+	font-size: 14px;
+}
+
+#form_submit {
+	background-color: #ffffff !important;
+}
+
+// SHOW PAGE CSS 
+.no_spacing {
+	margin-top: 0px;
+}
+
+#show_heading {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+#show_heading h1 {
+	font-weight: 800;
+}
+
+#show_sidebar h1 {
+	font-weight: 800;
+	text-align: left;
+	padding-bottom: 0px !important;
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+
+#show_panel_heading {
+	position: relative;
+	overflow: hidden;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-left: 0px;
+	padding-right: 40px;
+}
+
+#show_panel_heading img {
+	height: 480px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 95%;
+}

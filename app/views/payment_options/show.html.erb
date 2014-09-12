@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @payment_option.amount %>
+</p>
+
+<p>
+  <strong>Amount display:</strong>
+  <%= @payment_option.amount_display %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @payment_option.description %>
+</p>
+
+<p>
+  <strong>Shipping desc:</strong>
+  <%= @payment_option.shipping_desc %>
+</p>
+
+<p>
+  <strong>Delivery desc:</strong>
+  <%= @payment_option.delivery_desc %>
+</p>
+
+<p>
+  <strong>Limit:</strong>
+  <%= @payment_option.limit %>
+</p>
+
+<%= link_to 'Edit', edit_payment_option_path(@payment_option) %> |
+<%= link_to 'Back', payment_options_path %>
