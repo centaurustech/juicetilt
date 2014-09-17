@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140912072659) do
+ActiveRecord::Schema.define(version: 20140917142846) do
 
   create_table "bootsy_image_galleries", force: true do |t|
     t.integer  "bootsy_resource_id"
@@ -50,7 +50,6 @@ ActiveRecord::Schema.define(version: 20140912072659) do
     t.string   "country"
     t.string   "city"
     t.integer  "zip_code"
-    t.date     "birthday"
     t.string   "photo_id_file_name"
     t.string   "photo_id_content_type"
     t.integer  "photo_id_file_size"
