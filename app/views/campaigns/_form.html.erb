@@ -3,15 +3,15 @@
 
     <center>
 
-      <input id="pre_btn1" onclick="basic_step()" type="button" value="Basics" class="btn btn-primary btn-lg top-nav">
+      <input id="pre_btn1" onclick="basic_step()" type="button" value="Basics" class="btn btn-info btn-md top-nav">
 
-      <input id="next_btn1" onclick="perks_step()" type="button" value="Perks" class="btn btn-primary btn-lg top-nav">
+      <input id="next_btn1" onclick="perks_step()" type="button" value="Perks" class="btn btn-info btn-md top-nav">
     
-      <input id="next_btn1" onclick="story_step()" type="button" value="Story" class="btn btn-primary btn-lg top-nav">
+      <input id="next_btn1" onclick="story_step()" type="button" value="Story" class="btn btn-info btn-md top-nav">
     
-      <input id="next_btn2" onclick="team_step()" type="button" value="Team" class="btn btn-primary btn-lg top-nav">
+      <input id="next_btn2" onclick="team_step()" type="button" value="Team" class="btn btn-info btn-md top-nav">
     
-      <input id="next_btn2" onclick="fund_step()" type="button" value="Funding" class="btn btn-primary btn-lg top-nav">
+      <input id="next_btn2" onclick="fund_step()" type="button" value="Funding" class="btn btn-info btn-md top-nav">
 
     </center>
 
@@ -120,7 +120,7 @@
               <%= render 'perk_fields', f: perk %>
             <% end %>
             <div class="form-group tall">
-              <%= link_to_add_association "Add Perk", f, :perks %>
+              <%= link_to_add_association "Add Perk", f, :perks, :class => "btn btn-default btn-sm" %>
             </div>
 
           </div>

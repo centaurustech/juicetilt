@@ -1,6 +1,45 @@
 <div class="nested-fields">
+
 	<field>
-	  <%= f.label :name, "Name" %>
-	  <%= f.text_field :name %>
+
+		<div class="perk-group">
+
+			<div class="form-group">
+			    <%= f.label :perk_name, class:  "col-lg-3 control-label" %>
+			    <div class="col-lg-9">
+			    <%= f.text_field :name, class: "form-control"   %>
+			    </div>
+			</div>
+
+			<div class="form-group">
+			    <%= f.label :pledge_amount, class:  "col-lg-3 control-label" %>
+			    <div class="col-lg-3">
+			    <%= f.text_field :name, class: "form-control"   %>
+			    </div>
+			</div>
+
+			<div class="form-group">
+			    <%= f.label :number_available, class:  "col-lg-3 control-label" %>
+			    <div class="col-lg-3">
+			    <%= f.text_field :name, class: "form-control"   %>
+			    </div>
+			</div>
+
+			 <div class="form-group">
+			    <%= f.label :description, class:  "col-lg-3 control-label" %>
+			    <div class="col-lg-9">
+			    <%= f.text_area :name, class: "form-control text-area-no-resize", :size => "5x5"  %>
+			    </div>
+			</div>
+
+			<div class="perk-delete">
+				<%= link_to_remove_association "Remove Perk", f %>
+			</div>
+
+		</div>
+
 	</field>
+
 </div>
+
+
