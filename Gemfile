@@ -19,8 +19,8 @@ gem 'amazon_flex_pay', '~> 0.10.0'
 gem "figaro"
 gem 'auto_html', '~> 1.6.4'
 gem 'bootsy', '~> 2.0.10'
-
 gem 'cocoon'
+
 
 group :development, :test do
      gem 'sqlite3'

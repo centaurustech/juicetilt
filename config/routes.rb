@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+
   mount Bootsy::Engine => '/bootsy', as: 'bootsy'
+
   resources :payment_options
 
   resources :orders
@@ -9,10 +11,11 @@ Rails.application.routes.draw do
   end
 
   devise_for :users
+
   root "pages#home"
 
   get "about" => "pages#about"
-
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
