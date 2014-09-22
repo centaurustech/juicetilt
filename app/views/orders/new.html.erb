@@ -1,5 +1,12 @@
 <h1>New order</h1>
 
-<%= render 'form' %>
+<%= form_tag orders_path do%>
+    <p>Please enter your payment details:</p>
+    <div id="dropin"></div>
+    <%= submit_tag "Pay $10", class: "btn btn-primary btn-lg" %>
+<%end%>
+<script>
+braintree.setup(gon.client_token, 'dropin', { container: 'dropin' });
+</script>
 
 <%= link_to 'Back', orders_path %>

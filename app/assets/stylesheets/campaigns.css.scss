@@ -151,6 +151,18 @@
 	padding-right: 40px;
 }
 
+#show_panel_body {
+	position: relative;
+	overflow: hidden;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-right: 40px;
+}
+
+.body_desc {
+	padding-left: 45px;
+}
+
 #show_panel_heading img {
 	height: 480px;
 	margin-left: auto;

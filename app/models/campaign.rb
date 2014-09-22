@@ -23,7 +23,7 @@ class Campaign < ActiveRecord::Base
 	auto_html_for :video_url do
 	    html_escape
 	    image
-	    youtube(:width => 500, :height => 375, :autoplay => true)
+	    youtube(:width => 640, :height => 480, :autoplay => true)
 	    link :target => "_blank", :rel => "nofollow"
 	    simple_format
   	end
