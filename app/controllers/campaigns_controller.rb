@@ -8,6 +8,7 @@ class CampaignsController < ApplicationController
   end
 
   def show
+    @perks = @campaign.perks
   end
 
   def new
@@ -39,6 +40,10 @@ class CampaignsController < ApplicationController
     redirect_to campaigns_url, notice: 'Campaign was successfully destroyed.'    
   end
 
+  def show_campaign_perks
+    @perks = Perk.all
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_campaign
@@ -66,6 +71,6 @@ class CampaignsController < ApplicationController
                                        :street_address, 
                                        :country, 
                                        :zip_code, 
-                                       perks_attributes: [:name, :_destroy])
+                                       perks_attributes: [:name, :amount, :number_available, :description, :_destroy])
     end
 end

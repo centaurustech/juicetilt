@@ -188,7 +188,7 @@ DEPENDENCIES
   bootstrap-sass
   bootsy (~> 2.0.10)
   braintree (~> 2.34.1)
-  cocoon
+  cocoon (~> 1.2.6)
   coffee-rails (~> 4.0.0)
   devise (~> 3.3.0)
   figaro

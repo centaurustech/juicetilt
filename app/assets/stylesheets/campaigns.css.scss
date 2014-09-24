@@ -121,6 +121,9 @@
 }
 
 // SHOW PAGE CSS 
+.blue {
+	background-color: #e8f6ff;
+}
 .no_spacing {
 	margin-top: 0px;
 }
@@ -130,7 +133,7 @@
 	margin-bottom: 20px;
 }
 
-#show_heading h1 {
+#show_heading h2 {
 	font-weight: 800;
 }
 
@@ -138,7 +141,7 @@
 	font-weight: 800;
 	text-align: left;
 	padding-bottom: 0px !important;
-	margin-top: 10px;
+	margin-top: 8px;
 	margin-bottom: 0px;
 }
 
