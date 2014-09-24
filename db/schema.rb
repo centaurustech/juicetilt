@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140918055224) do
+ActiveRecord::Schema.define(version: 20140924191814) do
 
   create_table "bootsy_image_galleries", force: true do |t|
     t.integer  "bootsy_resource_id"
@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 20140918055224) do
     t.integer  "funding_goal"
     t.string   "legal_last_name"
     t.string   "legal_first_name"
-    t.integer  "phone_number"
+    t.integer  "phone_number",            limit: 8
     t.string   "street_address"
     t.string   "country"
     t.string   "city"
