@@ -67,6 +67,6 @@ class CampaignsController < ApplicationController
                                        :street_address, 
                                        :country, 
                                        :zip_code, 
-                                       perks_attributes: [:name, :amount, :number_available, :description, :_destroy])
+                                       perks_attributes: [:name, :amount, :number_available, :description, :id, :_destroy])
     end
 end
